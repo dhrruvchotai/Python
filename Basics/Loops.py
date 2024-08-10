@@ -1,4 +1,4 @@
-#Declare an List
+#Declared an List
 nums = [1,2,3,4,5]
 
 #for loop type 1
