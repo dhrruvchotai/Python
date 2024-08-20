@@ -1,6 +1,6 @@
 e = set() #This is an empty set.
 s1 = {1,2,2,4,3} #This is filled set. 
-s2 = {2,3} #This is not a empty set this is a empty dictionary
+s2 = {} #This is not a empty set this is a empty dictionary
 
 print(type(s1),type(s2),type(e)) #set dict set
 
