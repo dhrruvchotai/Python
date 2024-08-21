@@ -1,6 +1,8 @@
 #Mutable data type.
 items = [3,8,2,9,1,"Hello"]
 
+print(f"Item at index 1 : {items[1]}")
+
 print(items[0:3]) #just like slice in a string
 
 # items.sort()
