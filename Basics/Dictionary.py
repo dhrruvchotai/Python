@@ -34,3 +34,12 @@ lang = input("Enter language : ")
 data.update({name:lang}) 
 
 print(data)
+
+#NEW feature in py
+#Merge two dicts
+
+dict1 = {'val1':100,'val2':99}
+dict2 = {"val3":212,'val4':107}
+
+dict3 = dict1 | dict2
+print(f"Merged dicts : {dict3}")
