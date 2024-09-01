@@ -14,7 +14,7 @@ print(f"Arr3 is : {arr3}") #all will be in floating point because one element is
 
     # create 2-D array 
 arr1 = np.array([(1,2,3,4),(11,12,13,14)])
-print(f"2D - Arr1 is : {arr1}") #all integers
+print(f"2D - Arr1 is : {arr1}") 
 
 print("\n")
 
@@ -26,9 +26,9 @@ print(f"Shape of arr3 is : {arr3.shape}") #2d array means o/p:- (2,3) rows cols
 print("\n")
 
 #np.arange(only for 1d for 2d you have to use reshape with this!!)
-arr4 = np.arange(10) #elements from 0 to 9 
+arr4 = np.arange(10) #elements from 0 to 9!!
 print(f"Arr4 is : {arr4}") 
-arr4 = np.arange(0,13,3) #start stop range (basically creates an array)
+arr4 = np.arange(0,13,3) #start stop range or say gap(increment) (basically creates an array)
 print(f"Arr4 is : {arr4}")
 
 print("\n")
@@ -53,7 +53,9 @@ print(f"Arr7 is : {arr7}")
 
 print("\n")
 
-#Convert list to numpy array
+#Converted list to numpy array
 list1 = [1,23,45,5]
 arr8 = np.array(list1)
 print(f"Arr8 is : {arr8}")
+
+#.....Till l1!!
