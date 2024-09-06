@@ -37,3 +37,6 @@ print(f"Original np2 from view is : {np2}")
 np2[0] = 68
 print(f"Orginal np1 from view is : {np1}")
 print(f"Changed np2 from view is : {np2}")
+
+
+#.....Till l4!!
