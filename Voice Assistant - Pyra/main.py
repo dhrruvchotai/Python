@@ -24,9 +24,10 @@ if( __name__ == "__main__"):
                 print("Listening....")
                 audio = r.listen(source,timeout=2,phrase_time_limit=5)
 
-            command = r.recognize_google(audio) # recognize speech using Google
+            command = r.recognize_google(audio) # recognize speech using Google.
             print(command)
 
         except Exception as e:
             print(f"Error...{format(e)}.")
         
+        #9:44:47
