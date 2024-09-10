@@ -41,3 +41,5 @@ print("\n")
 print(f"np3 using nditer = ")
 for x in np.nditer(np3):
     print(x,end=" ")
+
+#.....Till l6!!
