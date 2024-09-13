@@ -11,10 +11,10 @@ import numpy as np
 np1 = np.eye(3) #rows = cols = 3 default
 print(np1)
 
-#4 X 4
+#4 X 4 identity matrix
 print(print(np.eye(4)))
 
-#3 X 4 
+#3 X 4 identity matrix
 np1 = np.eye(3,4) #rows,cols
 print(np1)
 
