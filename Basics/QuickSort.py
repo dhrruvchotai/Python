@@ -1,8 +1,6 @@
 def QuickSort(arr,low,high):
 
     if(low<high):
-        print(f"Calling QuickSort with low = {low} and high = {high}.")
-        print(f"Sorted subarray = {arr[low:high+1]}.")
         i = low + 1 
         j = high
         pivot = arr[low]
