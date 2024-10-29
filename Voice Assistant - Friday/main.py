@@ -1,4 +1,5 @@
 import speech_recognition as sr
+import webbrowser
 import pyttsx3
 
 engine = pyttsx3.init()  # Initialize text-to-speech
@@ -10,9 +11,17 @@ def speak(text):
 def processCommand(c):
     print(f"Processing command: {c}")
 
+    if "open google" in c.lower():
+        webbrowser.open("https://google.com")
+    elif "open youtube" in c.lower():
+        webbrowser.open("https://youtube.com")
+    elif "open linkedin" in c.lower():
+        webbrowser.open("https://linkedin.com")
+
 if __name__ == "__main__":
-    speak("Initializing Luna....")
+    speak("Initializing Friday....")
     r = sr.Recognizer()
+    #for backg noice
     r.energy_threshold = 300
     r.dynamic_energy_threshold = True
 
@@ -23,8 +32,8 @@ if __name__ == "__main__":
             # Listen for the wake word "Luna"
             with sr.Microphone() as source:
                 r.adjust_for_ambient_noise(source, duration=1)
-                print("Listening for 'Luna'...")
-                audio = r.listen(source, timeout=5, phrase_time_limit=5)
+                print("Listening for 'Friday'...")
+                audio = r.listen(source, timeout=2, phrase_time_limit=1)
 
             command = r.recognize_google(audio).lower()
 
@@ -33,8 +42,8 @@ if __name__ == "__main__":
                 
                 # Listen for the actual command
                 with sr.Microphone() as source:
-                    print("Luna Active... Listening for your command.")
-                    audio = r.listen(source, timeout=7, phrase_time_limit=7)
+                    print("Friday Active... Listening for your command.")
+                    audio = r.listen(source, timeout=2, phrase_time_limit=1)
                     command = r.recognize_google(audio).lower()
 
                     # Process the command
