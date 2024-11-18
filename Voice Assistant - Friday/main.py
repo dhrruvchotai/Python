@@ -2,6 +2,9 @@ import speech_recognition as sr
 import webbrowser
 import pyttsx3
 import musicLibrary
+import pywhatkit
+from datetime import datetime
+
 
 engine = pyttsx3.init()  # Initialize text-to-speech
 
@@ -14,15 +17,30 @@ def processCommand(c):
 
     if "open google" in c.lower():
         webbrowser.open("https://google.com")
-    elif "open youtube"in c.lower():
+    elif "open youtube" in c.lower():
         webbrowser.open("https://youtube.com")
-    elif "open linkedin"in c.lower():
+    elif "open linkedin" in c.lower():
         webbrowser.open("https://linkedin.com")
-    elif c.lower().startswith("play"):
-        song = c[5:].strip()
-        link = musicLibrary.music[song]
-        webbrowser.open(link)
+    # elif c.lower().startswith("play"):
+    #     song = c[5:].strip()
+    #     link = musicLibrary.music[song]
+    #     webbrowser.open(link)
+    elif "play" in c.lower():
+        song = c.replace("play"," ").strip()
+        text = f"playing {song}..."
+        speak(text)
+        print(text)
+        pywhatkit.playonyt(song)
 
+    elif "time" in c.lower():
+        time = datetime.now().time()
+        print(f"current time is {time}")
+        speak(time)
+
+    elif "date" in c.lower():
+        date = datetime.now().date()
+        print(f"current date is {date}")
+        speak(date)
 
 
 
