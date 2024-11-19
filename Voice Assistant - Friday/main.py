@@ -25,7 +25,7 @@ def get_api_key():
 
 def generate_image(prompt):
     api_key = get_api_key() 
-    print(api_key)
+    # print(api_key)
     headers = {"Authorization": f"Bearer {api_key}"}
     API_URL = "https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5"
 
@@ -36,7 +36,7 @@ def generate_image(prompt):
         prompt = prompt.replace("create an image of"," ").strip()
         with open(f"{prompt}.png", "wb") as f:
             f.write(response.content)
-        print("Image saved as generated_image.png")
+        print(f"Image saved as {prompt}.png")
 
     elif response.status_code == 503:
         print(f"Model is loading. Retrying in {response.json()['estimated_time']} seconds...")
@@ -141,7 +141,7 @@ if __name__ == "__main__":
             command = r.recognize_google(audio).lower()
 
             if "friday" in command:
-                speak("Yes..")
+                speak("Yes sir ..")
                 
                 # Listen for the actual command
                 with sr.Microphone() as source:
